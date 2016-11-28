@@ -1,7 +1,9 @@
 def pobierz_wyrazy(nazwa):
+    lista = []
     plik = open(nazwa,'r')
-    for wyraz in plik.readlines():
-        print(wyraz)
-    plik.close()
+    calosc = plik.read()
+    calosc = calosc.split(" ")
+    for wyraz in calosc:
+        print wyraz
         
 pobierz_wyrazy('wyrazy.txt')
