@@ -1,6 +1,6 @@
 from wyrazy import *
 
 def test():
-    histogram("wyrazy.txt")
+    histogram("tekst.txt")
 
 test()

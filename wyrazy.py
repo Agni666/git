@@ -11,6 +11,7 @@ def pobierz_wyrazy(nazwa):
     calosc = calosc.replace(";","")
     calosc = calosc.replace("?","")
     calosc = calosc.replace("!","")
+    calosc = calosc.replace("\n","")
     calosc = calosc.split(" ")
     for wyraz in calosc:
         lista.append(wyraz)
