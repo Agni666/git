@@ -23,9 +23,12 @@ def histogram(nazwa):
     Pobiera nazwe pliku z ktorego pobiera tekst.
     Zwraca na ekran hitogram.
     """
+    if type(nazwa) == str:
+	listawyrazow = pobierz_wyrazy(nazwa)
+    if type(nazwa) == list:
+	listawyrazow = nazwa
     slownik = {}
     wynik = ""
-    listawyrazow = pobierz_wyrazy(nazwa)
     for wyraz in listawyrazow:
         dlugosc = len(wyraz)
         if dlugosc in slownik:
@@ -38,4 +41,4 @@ def histogram(nazwa):
         print i, wynik
 	wynik = ""
 
-print pobierz_wyrazy("tekst.txt")
+print histogram('tekst.txt')
