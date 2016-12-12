@@ -6,6 +6,7 @@ def pobierz_wyrazy(nazwa):
     lista = []
     plik = open(nazwa,'r')
     calosc = plik.read()
+    calosc = calosc.remove(".",",",";","?" )
     calosc = calosc.split(" ")
     for wyraz in calosc:
         lista.append(wyraz)
