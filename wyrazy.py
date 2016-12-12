@@ -35,7 +35,14 @@ def histogram(nazwa):
     for i in slownik.keys():
 	for znak in range(slownik[i]):
 	    wynik += "#"
+	    if "##########" in wynik:
+                wynik = wynik.replace("##########","*")
+            if "**********" in wynik:
+		wynik = wynik.replace("**********","$")
+            if "$$$$$$$$$$" in wynik:
+		wynik = wynik.replace("$$$$$$$$$$","@")
         print i, wynik
 	wynik = ""
 
 print pobierz_wyrazy("tekst.txt")
+print histogram("tekst2.txt")
