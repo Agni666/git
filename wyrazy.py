@@ -6,7 +6,11 @@ def pobierz_wyrazy(nazwa):
     lista = []
     plik = open(nazwa,'r')
     calosc = plik.read()
-    calosc = calosc.remove(".",",",";","?","!")
+    calosc = calosc.replace(".","")
+    calosc = calosc.replace(",","")
+    calosc = calosc.replace(";","")
+    calosc = calosc.replace("?","")
+    calosc = calosc.replace("!","")
     calosc = calosc.split(" ")
     for wyraz in calosc:
         lista.append(wyraz)
@@ -32,3 +36,5 @@ def histogram(nazwa):
 	    wynik += "#"
         print i, wynik
 	wynik = ""
+
+print pobierz_wyrazy("tekst.txt")
