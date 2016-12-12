@@ -1,26 +1,33 @@
-<<<<<<< HEAD
 def pobierz_wyrazy(nazwa):
+    """
+    Funkcja pobiera z pliku tekst i dzieli go na wyrazy.
+    Zwraca liste wyrazow.
+    """
     lista = []
     plik = open(nazwa,'r')
     calosc = plik.read()
     calosc = calosc.split(" ")
     for wyraz in calosc:
-        print wyraz
-        
-pobierz_wyrazy('wyrazy.txt')
-=======
-text = open('tekst.txt').read()
-text.replace(",","")
-text.replace("/n","")
-text=text.split(' ',)
-print text
-
-lista=[]
-for j in range (30):
-	lista.append(0)
-
-for i in text:
-	lista[len(i)]+=1
-
-print lista
->>>>>>> 0998bd1aca96e2b0a26d605a83175238e9f44069
+        lista.append(wyraz)
+    return lista
+    
+def histogram(nazwa):
+    """
+    Funkcja rysuje histogram licznosci liter w wyrazie.
+    Pobiera nazwe pliku z ktorego pobiera tekst.
+    Zwraca na ekran hitogram.
+    """
+    slownik = {}
+    wynik = ""
+    listawyrazow = pobierz_wyrazy(nazwa)
+    for wyraz in listawyrazow:
+        dlugosc = len(wyraz)
+        if dlugosc in slownik:
+            slownik[dlugosc] += 1
+        else:
+            slownik[dlugosc] = 1
+    for i in slownik.keys():
+	for znak in range(slownik[i]):
+	    wynik += "#"
+        print i, wynik
+	wynik = ""

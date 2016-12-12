@@ -1,2 +1,1 @@
-Dodac dzielenie na wyrazy.
-Dodac przeszukiwanie wyrazow o podanej liczbie znakow.
+Wszytko gotowe
