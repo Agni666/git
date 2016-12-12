@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 def pobierz_wyrazy(nazwa):
     lista = []
     plik = open(nazwa,'r')
@@ -7,3 +8,19 @@ def pobierz_wyrazy(nazwa):
         print wyraz
         
 pobierz_wyrazy('wyrazy.txt')
+=======
+text = open('tekst.txt').read()
+text.replace(",","")
+text.replace("/n","")
+text=text.split(' ',)
+print text
+
+lista=[]
+for j in range (30):
+	lista.append(0)
+
+for i in text:
+	lista[len(i)]+=1
+
+print lista
+>>>>>>> 0998bd1aca96e2b0a26d605a83175238e9f44069
